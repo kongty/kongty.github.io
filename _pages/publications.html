@@ -1,0 +1,29 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% if site.author.googlescholar %}
+  <p class="pub-scholar">See also my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.</p>
+{% endif %}
+
+{% assign pubs = site.publications | sort: "order" %}
+<div class="pub-list">
+{% for pub in pubs %}
+  <div class="pub">
+    <div class="pub-main">
+      <div class="pub-title">{{ pub.title }}</div>
+      <div class="pub-authors">{{ pub.authors }}</div>
+      <div class="pub-venue"><i>{{ pub.venue }}</i>, {{ pub.year }}</div>
+    </div>
+    <div class="pub-links">
+      {% if pub.pdf %}<a href="{{ base_path }}{{ pub.pdf }}" title="PDF" aria-label="PDF"><i class="fas fa-file-pdf" aria-hidden="true"></i></a>{% endif %}
+      {% if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" title="Publisher page" aria-label="Publisher page"><i class="fas fa-link" aria-hidden="true"></i></a>{% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>

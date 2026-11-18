@@ -1,0 +1,13 @@
+# Order of the links in the header of the website.
+main:
+  - title: "About"
+    url: /
+
+  - title: "Experience"
+    url: /experience/
+
+  - title: "Publications"
+    url: /publications/
+
+  - title: "CV"
+    url: /cv/
