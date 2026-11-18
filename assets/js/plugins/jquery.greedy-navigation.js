@@ -17,10 +17,13 @@ function updateNav() {
 
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
-  // The visible list is overflowing the nav
-  if ($vlinks.width() > availableSpace) {
+  // On phones, keep only the site title, theme toggle and menu button in the bar
+  var collapseAll = window.matchMedia('(max-width: 767px)').matches;
 
-    while ($vlinks.width() > availableSpace && $vlinks.children("*:not(.persist)").length > 0) {
+  // The visible list is overflowing the nav
+  if (collapseAll || $vlinks.width() > availableSpace) {
+
+    while ((collapseAll || $vlinks.width() > availableSpace) && $vlinks.children("*:not(.persist)").length > 0) {
       // Record the width of the list
       breaks.push($vlinks.width());
 
