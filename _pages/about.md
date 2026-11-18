@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! I'm a machine learning hardware architect at Google, where I work on TPU architecture and HW/SW co-design.
+Hi! I'm a Machine Learning Hardware Architect at Google, where I work on TPU architecture and HW/SW co-design.
 
 My work focuses on HW/SW co-design and performance modeling for the scale-up networks of next-generation TPUs. I build analytical and cycle-level performance models to guide architecture and perf/TCO decisions. I also work on collective communication for large-scale LLM training and serving.
 
